@@ -19,7 +19,7 @@ function returnCurrentWeather(cityName) {
         let weatherIcon = `https://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`;
 
         currWeatherDiv.html(`
-        <h2>${response.name}, ${response.sys.country} (${currTime.getMonth()+1}/${currTime.getDate()}/${currTime.getFullYear()})<img src=${weatherIcon} height="70px"></h2>
+        <h2>${response.name}, ${response.sys.country} ${currTime.getMonth()+1}/${currTime.getDate()}/${currTime.getFullYear()}<img src=${weatherIcon} height="70px"></h2>
         <p>Temperature: ${response.main.temp} &#176;F</p>
         <p>Humidity: ${response.main.humidity}%</p>
         <p>Wind Speed: ${response.wind.speed} MPH</p>
